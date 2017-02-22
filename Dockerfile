@@ -8,7 +8,7 @@ FROM alpine:3.3
 
 LABEL org.pm.alpine-openvpn.verison="2.1" \
       org.pm.alpine-openvpn.verison.image-specs="{ \
-      \"Description\":\"Alpine-java container running minecraft server\", \
+      \"Description\":\"Alpine-java container supporting openVPN client\", \
       \"java-version\":\"8\" \
       }"
 

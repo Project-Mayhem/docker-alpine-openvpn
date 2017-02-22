@@ -32,8 +32,8 @@ docker run \
       -l $CONTAINER_NAME \
       -it \
       $REPO_AND_IMAGE
+      #--entrypoint="/bin/bash" for debugging
 
-      # --entrypoint="/bin/bash" for debugging
 
 # attach to the new container
 #docker attach -it minecraft
