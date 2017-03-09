@@ -11,9 +11,10 @@ docker run \
       -it \
       --cap-add=NET_ADMIN \
       --device=/dev/net/tun \
+      --entrypoint["entry.sh -d"] \
       org.pm/alpine-openvpn:2.1
 
---device allows the tunnel to form
+--device allows the tunnel to form, dropping you into a shell to interact within the tunnel.
 
 --cap-add allows Docker-machine to extend privileges to this container to modify the network stack.
 
