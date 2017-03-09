@@ -29,7 +29,7 @@ RUN apk add --update --no-cache ca-certificates openssl bash sudo openvpn \
     && update-ca-certificates
 
 # Copy over startup script
-COPY entry.sh /usr/bin
+COPY entry.sh /usr/bin 
 
 RUN chmod u+x /usr/bin/entry.sh
 

@@ -1,6 +1,6 @@
 # Example Data Host Volume Mount #
 data/*
-
+config/*
 # ignore any python cache
 *.pyc
 

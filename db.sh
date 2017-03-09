@@ -6,6 +6,7 @@
 REPO_AND_IMAGE='org.pm/alpine-openvpn:2.1'
 CONTAINER_NAME='openvpn'
 
+
 #stop any running containers
 docker ps | grep $CONTAINER_NAME | awk '{print $1}' | xargs docker stop
 
@@ -36,13 +37,11 @@ if [ $? -eq 0 ]; then
         --name $CONTAINER_NAME \
         -v ~/dev/projectMayhem/docker-alpine-openvpn/config:/opt/config \
         -l $CONTAINER_NAME \
-        -d \
         --cap-add=NET_ADMIN \
         --device=/dev/net/tun \
+        -it \
+        --entrypoint="/bin/bash" \
         $REPO_AND_IMAGE
-        # -it
-        #--entrypoint="/bin/bash" \
-
   #$REPO_AND_IMAGE
         #for debugging
 
